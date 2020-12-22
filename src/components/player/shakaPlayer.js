@@ -34,7 +34,8 @@ class VideoPlayer extends React.Component{
 	}
 
 	componentDidMount() {
-    $( '.logo' ).hide();
+		$('.loader-wrapper').show()
+		$( '.logo' ).hide();
 		//Link to MPEG-DASH video
 		var manifestUri = 'https://bitmovin-a.akamaihd.net/content/art-of-motion_drm/mpds/11331.mpd';
     //'https://storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd';
@@ -65,6 +66,7 @@ class VideoPlayer extends React.Component{
   		// Try to load a manifest.
 	  	// This is an asynchronous process.
 	  	player.load(manifestUri).then(function() {
+				$('.loader-wrapper').hide() //hides the loader 
 		    // This runs if the asynchronous load is successful.
 		    console.log('The video has now been loaded!');
 	  	}).catch(this.onError);  // onError is executed if the asynchronous load fails.
@@ -76,11 +78,11 @@ class VideoPlayer extends React.Component{
   }
 
 
-  goToMov() {
-    let history = useHistory()
-    console.log("gotoMovies")
-    history.push('/movies')
-  }
+  // goToMov() {
+  //   let history = useHistory()
+  //   console.log("gotoMovies")
+  //   history.push('/movies')
+  // }
 
 
 	render() {
@@ -97,7 +99,8 @@ class VideoPlayer extends React.Component{
 					className="shaka-video"
 					ref={this.videoComponent}
           // poster="//shaka-player-demo.appspot.com/assets/poster.jpg"
-          width= {window.outerWidth}
+					width= {window.innerWidth}
+					height = {window.innerHeight}
 				/>
 			</div>
 		);
