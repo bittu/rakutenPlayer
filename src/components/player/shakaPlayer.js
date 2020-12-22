@@ -1,10 +1,9 @@
 import React from 'react';
-import 'shaka-player/dist/controls.css';
 const shaka = require('shaka-player/dist/shaka-player.ui.js');
 import $ from 'jquery'; 
-import { BrowserRouter as Router, Switch, Route, Link ,useHistory} from 'react-router-dom';
-import LeftLogo from '../../assets/left-w.svg';
-import './player.css'
+
+import './player.css';
+import 'shaka-player/dist/controls.css';
 //Creating class component
 class VideoPlayer extends React.Component{
 
@@ -76,13 +75,6 @@ class VideoPlayer extends React.Component{
   componentWillUnmount() {
     $('.logo' ).show();
   }
-
-
-  // goToMov() {
-  //   let history = useHistory()
-  //   console.log("gotoMovies")
-  //   history.push('/movies')
-  // }
 
 
 	render() {
