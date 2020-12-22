@@ -62,7 +62,6 @@
     width: -webkit-fill-available;
 }
 .social-item {
-    /* border: solid 2px red; */
     display: flex; 
     height: 70px;
     margin: 18px;
@@ -89,7 +88,6 @@
 }
 
 .social-name {
-    /* border: 2px solid yellow; */
     width: 70%;
     margin-left: 5%;
     transform: translate(9px, 20px);

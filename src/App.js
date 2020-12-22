@@ -5,9 +5,7 @@ import './App.css'
 
 const App = () => {
     return(
-        <>
-        <Route />
-        </>
+         <Route />
     )
 }
 

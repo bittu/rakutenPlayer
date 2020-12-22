@@ -1,10 +1,12 @@
 import React, { useState, useCallback} from 'react'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom';
-import './scroll_list.css'
 import $ from 'jquery'; 
+
 import Right from '../../assets/right.png'
 import Left from '../../assets/left.png'
+
+import './scroll_list.css'
 
 const scroll_list =  props => {
     const history = useHistory();

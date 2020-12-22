@@ -3,10 +3,9 @@ import getData from '../../manager/networkManager'
 import { useDispatch, useSelector } from 'react-redux'
 import Carousel from '../carousel_dir/carousel'
 import Scroll_list from '../scroll_list/scroll_list'
-import './Home.css'
 import $ from 'jquery'; 
-import Axios from 'axios'
 
+import './Home.css';
 
 const Home = () => {
     const poAtThBoOf = useSelector(state => state.lists_Red.PATBO)
@@ -49,7 +48,6 @@ const Home = () => {
             dispatch(setIfYouMissed())
             dispatch(setOurFavoritesOfTheWeek())
             $('.loader-wrapper').hide()
-            // $('.loader').css("display","none")
         })
     }, []);
     return (

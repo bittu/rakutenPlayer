@@ -1,9 +1,10 @@
 import React, {  useEffect, useReducer } from 'react'
 import { useSelector } from 'react-redux'
-// import Axios from 'axios'
 import {getContentDetail} from '../../manager/networkManager'
 import { useHistory } from 'react-router-dom';
-import './movie.css'
+import DirectorsAndActors from '../directorsAndActors_list/directorsAndActors_list'
+import $ from 'jquery'; 
+
 import Year from '../../assets/year.png'
 import Time from '../../assets/time.png'
 import Flag from '../../assets/flag.png'
@@ -15,8 +16,8 @@ import Genres from '../../assets/genres.png'
 import TwitterLogo from '../../assets/twitter2.svg'
 import pininterestLogo from '../../assets/pininteresT.svg'
 import FacebookLogo from '../../assets/facebook.png'
-import DirectorsAndActors from '../directorsAndActors_list/directorsAndActors_list'
-import $ from 'jquery'; 
+
+import './movie.css'
 
 const movie = () => {
     const history = useHistory();

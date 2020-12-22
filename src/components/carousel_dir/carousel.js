@@ -1,10 +1,12 @@
 import React, {useCallback} from 'react'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom';
-import './carousel.css'
-import $ from 'jquery'; 
+import $ from 'jquery';
+
 import Right from '../../assets/right.png'
 import Left from '../../assets/left.png'
+
+import './carousel.css'
 
 const carousel = (props) => {
     // console.log(props)

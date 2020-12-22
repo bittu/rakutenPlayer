@@ -1,14 +1,17 @@
 import React, { useState, useCallback } from 'react'
-import './directorsAndActors_list.css'
 import $ from 'jquery'; 
+
 import Right from '../../assets/right.png'
 import Left from '../../assets/left.png'
+
+import './directorsAndActors_list.css'
 
 const directorsAndActors_list =  props => {
     const [posValue, setPosValue] = useState(0)
     let directors = Array.from(props.directors);
     let actors = Array.from(props.actors);
     let data = directors.concat(actors);
+    
     // the animation for the horizontal lists
     const scroll = useCallback(
         (direction,id) => {

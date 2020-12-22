@@ -1,9 +1,11 @@
 import React from 'react'
-import './footer.css'
+
 import Device_icon from '../../assets/devices.png'
 import Payment_icon from '../../assets/payments.png'
 import Info_icon from '../../assets/info.png'
 import RakutenLogo from '../../assets/rakutenTv.png'
+
+import './footer.css'
 
 const footer = () => {
     return (
