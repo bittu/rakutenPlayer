@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import RakutenLogo from '../../assets/rakutenTv.png'
+import RakutenLogo from '../../assets/rakutenTv.png';
+
 import './navBar.css'
 
 const Navbar = () => {
