@@ -37,6 +37,11 @@ export default function(state = {
                 ...state,
                 OFOTW: action.obj
             }
+        case 'XMEN':
+            return {
+                ...state,
+                XMEN: action.obj
+            }
         default:
             return state
     }

@@ -14,6 +14,7 @@ const Home = () => {
     const spPr = useSelector(state => state.lists_Red.SP)
     const ifYoMi = useSelector(state => state.lists_Red.IYM)
     const OuFaOfThWe = useSelector(state => state.lists_Red.OFOTW)
+    const XMEN = useSelector(state => state.lists_Red.XMEN)
     const dispatch = useDispatch()
     useEffect( () => {
         getData().then((responseArr)=>{
@@ -22,7 +23,8 @@ const Home = () => {
             const myObjStrEIET = JSON.stringify(responseArr[2].data.data.contents.data);
             const myObjStrEE = JSON.stringify(responseArr[3].data.data.contents.data);
             const myObjStrIYM = JSON.stringify(responseArr[4].data.data.contents.data);
-            const myObjStrNPDLS = JSON.stringify(responseArr[5].data.data.contents.data);
+            const myObjXmen = JSON.stringify(responseArr[5].data.data.contents.data);
+            const myObjStrNPDLS = JSON.stringify(responseArr[6].data.data.contents.data);
             const setPopularAtTheBoxOffice = () => (
                 { type: "POPULARATTHEBOXOFFICE", obj: JSON.parse(myObjStrPET) }
             );
@@ -38,6 +40,9 @@ const Home = () => {
             const setIfYouMissed = () => (
                 { type: "IFYOUMISSED", obj: JSON.parse(myObjStrIYM) }
             );
+            const SpclXMen = () => (
+                { type: "XMEN", obj: JSON.parse(myObjXmen) }
+            );
             const setOurFavoritesOfTheWeek = () => (
                 { type: "OURFAVORITESOFTHEWEEK", obj: JSON.parse(myObjStrNPDLS) }
             );
@@ -46,6 +51,7 @@ const Home = () => {
             dispatch(setPremieresMustHaveAtTheBoxOffice())
             dispatch(setSpanishPremieres())
             dispatch(setIfYouMissed())
+            dispatch(SpclXMen())
             dispatch(setOurFavoritesOfTheWeek())
             $('.loader-wrapper').hide()
         })
@@ -63,6 +69,8 @@ const Home = () => {
             <Scroll_list id="id4" images ={spPr}/>
             <h3 className="title">Si Te Perdiste</h3>
             <Scroll_list id="id5" images ={ifYoMi}/>
+            <h3 className="title">Especial x-men</h3>
+            <Scroll_list id="id6" images ={XMEN}/>
             <h3 className="title">Nuestras Preferidas De La Semana</h3>
             <Scroll_list id="id6" images ={OuFaOfThWe}/>
         </div>

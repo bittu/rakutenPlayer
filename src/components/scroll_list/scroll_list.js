@@ -11,7 +11,11 @@ import './scroll_list.css'
 const scroll_list =  props => {
     const history = useHistory();
     const [posValue, setPosValue] = useState(0)
-    let data = Array.from(props.images);
+    let data = undefined
+    if(props.images){
+     data = Array.from(props.images);
+    }
+    
     const dispatch = useDispatch()
     // the animation for the horizontal lists
     const scroll = useCallback(
@@ -38,7 +42,8 @@ const scroll_list =  props => {
             <div className="main">
                 <a className={posValue > 0?"prev":"prev_hidden"} onClick={()=>{scroll(-1,props.id)}}><img src={Left} alt="left arrow" width="30" height="50" /></a>
                 <section className="card" id={props.id}>
-                    {data.map((item,i) => {
+                    { (data)?
+                        data.map((item,i) => {
                         return (
                             <div className="tooltip" key={i}>
                                 <img className="card--content" width="180" height="250"
@@ -47,7 +52,7 @@ const scroll_list =  props => {
                                 />
                             </div>
                         )
-                    })}                    
+                    }):[]}                    
                 </section>
                 <a className="next" onClick={()=>{scroll(1,props.id)}}><img src={Right} alt="right arrow" width="30" height="50" /></a>
             </div>

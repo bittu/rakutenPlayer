@@ -11,6 +11,7 @@ const getData=() => {
           Axios.get('http://127.0.0.2:8080/https://gizmo.rakuten.tv/v3/lists/estrenos-imprescindibles-en-taquilla?classification_id=5&device_identifier=web&locale=es&market_code=es'),
           Axios.get('http://127.0.0.2:8080/https://gizmo.rakuten.tv/v3/lists/estrenos-espanoles?classification_id=5&device_identifier=web&locale=es&market_code=es'),
           Axios.get('http://127.0.0.2:8080/https://gizmo.rakuten.tv/v3/lists/si-te-perdiste?classification_id=5&device_identifier=web&locale=es&market_code=es'),
+          Axios.get('http://127.0.0.2:8080/https://gizmo.rakuten.tv/v3/lists/especial-x-men?classification_id=5&device_identifier=web&locale=es&market_code=es'),
           Axios.get('http://127.0.0.2:8080/https://gizmo.rakuten.tv/v3/lists/nuestras-preferidas-de-la-semana?classification_id=5&device_identifier=web&locale=es&market_code=es')
       ])
       .then(function (responseArr) {
