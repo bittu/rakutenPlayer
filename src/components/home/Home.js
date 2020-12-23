@@ -3,6 +3,7 @@ import getData from '../../manager/networkManager'
 import { useDispatch, useSelector } from 'react-redux'
 import Carousel from '../carousel_dir/carousel'
 import Scroll_list from '../scroll_list/scroll_list'
+import { useHistory } from 'react-router-dom';
 import $ from 'jquery'; 
 
 import './Home.css';
@@ -16,6 +17,7 @@ const Home = () => {
     const OuFaOfThWe = useSelector(state => state.lists_Red.OFOTW)
     const XMEN = useSelector(state => state.lists_Red.XMEN)
     const dispatch = useDispatch()
+    const history = useHistory();
     useEffect( () => {
         getData().then((responseArr)=>{
             const myObjStrPET = JSON.stringify(responseArr[0].data.data.contents.data);
@@ -54,6 +56,11 @@ const Home = () => {
             dispatch(SpclXMen())
             dispatch(setOurFavoritesOfTheWeek())
             $('.loader-wrapper').hide()
+        })
+        .catch((err)=>{
+            console.log(err)
+            $('.loader-wrapper').hide();
+            history.push('/error')
         })
     }, []);
     return (

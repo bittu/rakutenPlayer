@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from '../home/Home'
+import Error from '../errorScreen/error'
 import Movie from '../movieDetails/movie'
 import App from '../player/shakaPlayer';
 import Navbar from '../NavBar/navBar'
@@ -29,6 +30,7 @@ const menu = () => {
               }/>
 
               <Route exact path='/player' component={App}/>  
+              <Route exact path ='/error' component={Error}/>
 
           </Switch>
         </Router>

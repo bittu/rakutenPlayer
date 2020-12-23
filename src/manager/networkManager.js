@@ -1,23 +1,28 @@
 import React from 'react';
-import Axios from 'axios'
+import Axios from 'axios';
 
 const getData=() => {
-
-  return new Promise((resolve)=>{
+  
+  return new Promise((resolve,reject)=>{
      const fetch = async () => {
       await Axios.all([
-          Axios.get('http://127.0.0.2:8080/https://gizmo.rakuten.tv/v3/lists/populares-en-taquilla?classification_id=5&device_identifier=web&locale=es&market_code=es'),
-          Axios.get('http://127.0.0.2:8080/https://gizmo.rakuten.tv/v3/lists/estrenos-para-toda-la-familia?classification_id=5&device_identifier=web&locale=es&market_code=es'),
-          Axios.get('http://127.0.0.2:8080/https://gizmo.rakuten.tv/v3/lists/estrenos-imprescindibles-en-taquilla?classification_id=5&device_identifier=web&locale=es&market_code=es'),
-          Axios.get('http://127.0.0.2:8080/https://gizmo.rakuten.tv/v3/lists/estrenos-espanoles?classification_id=5&device_identifier=web&locale=es&market_code=es'),
-          Axios.get('http://127.0.0.2:8080/https://gizmo.rakuten.tv/v3/lists/si-te-perdiste?classification_id=5&device_identifier=web&locale=es&market_code=es'),
-          Axios.get('http://127.0.0.2:8080/https://gizmo.rakuten.tv/v3/lists/especial-x-men?classification_id=5&device_identifier=web&locale=es&market_code=es'),
-          Axios.get('http://127.0.0.2:8080/https://gizmo.rakuten.tv/v3/lists/nuestras-preferidas-de-la-semana?classification_id=5&device_identifier=web&locale=es&market_code=es')
+          Axios.get('https://thingproxy.freeboard.io/fetch/https://gizmo.rakuten.tv/v3/lists/populares-en-taquilla?classification_id=5&device_identifier=web&locale=es&market_code=es'),
+          Axios.get('https://thingproxy.freeboard.io/fetch/https://gizmo.rakuten.tv/v3/lists/estrenos-para-toda-la-familia?classification_id=5&device_identifier=web&locale=es&market_code=es'),
+          Axios.get('https://thingproxy.freeboard.io/fetch/https://gizmo.rakuten.tv/v3/lists/estrenos-imprescindibles-en-taquilla?classification_id=5&device_identifier=web&locale=es&market_code=es'),
+          Axios.get('https://thingproxy.freeboard.io/fetch/https://gizmo.rakuten.tv/v3/lists/estrenos-espanoles?classification_id=5&device_identifier=web&locale=es&market_code=es'),
+          Axios.get('https://thingproxy.freeboard.io/fetch/https://gizmo.rakuten.tv/v3/lists/si-te-perdiste?classification_id=5&device_identifier=web&locale=es&market_code=es'),
+          Axios.get('https://thingproxy.freeboard.io/fetch/https://gizmo.rakuten.tv/v3/lists/especial-x-men?classification_id=5&device_identifier=web&locale=es&market_code=es'),
+          Axios.get('https://thingproxy.freeboard.io/fetch/https://gizmo.rakuten.tv/v3/lists/nuestras-preferidas-de-la-semana?classification_id=5&device_identifier=web&locale=es&market_code=es')
       ])
       .then(function (responseArr) {
+        console.log(responseArr)
         resolve(responseArr);
-        
-      });
+      })
+      .catch((e)=>{
+        reject(e)
+        // const history = useHistory();
+        // history.push('/error')
+      })
   }
   fetch();
 
