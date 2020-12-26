@@ -20,6 +20,9 @@ module.exports = {
                 'css-loader'
                 ]
             },
+            // "transform": {
+            //   "\\.[jt]sx?$": "babel-jest",
+            // },
             {
                 test: /\.(png|jp(e*)g|svg|gif)$/,
 

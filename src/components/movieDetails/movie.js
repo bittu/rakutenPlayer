@@ -56,9 +56,9 @@ const movie = () => {
         // get data from the third party api
         let url = ''
         if(Object.keys(movieID).length === 0) {
-            url = 'http://127.0.0.2:8080/https://gizmo.rakuten.tv/v3/movies/'+localStorage.movieID+'?classification_id=5&device_identifier=web&locale=es&market_code=es'
+            url = 'https://thingproxy.freeboard.io/fetch/https://gizmo.rakuten.tv/v3/movies/'+localStorage.movieID+'?classification_id=5&device_identifier=web&locale=es&market_code=es'
         } else {
-            url = 'http://127.0.0.2:8080/https://gizmo.rakuten.tv/v3/movies/'+movieID+'?classification_id=5&device_identifier=web&locale=es&market_code=es'
+            url = 'https://thingproxy.freeboard.io/fetch/https://gizmo.rakuten.tv/v3/movies/'+movieID+'?classification_id=5&device_identifier=web&locale=es&market_code=es'
         }
             getContentDetail(url).then((response)=>{
                 // initialize local state

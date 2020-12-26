@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Device_icon from '../../assets/devices.png'
 import Payment_icon from '../../assets/payments.png'
 import Info_icon from '../../assets/info.png'
@@ -18,17 +17,17 @@ const footer = () => {
             services and range of thematic channels for free, including Movies, Euronews, Kids TV, Viki, Documentaries 
             and Rakuten Stories, a channel that embodies Rakuten TV´s original and exclusive content.</p>
             <div className="footer_info_block">
-                <img className="footer-image" src={Device_icon} alt="devices" width="60px" height="40px"/>
+                <img className="footer-image device-img" src={Device_icon} alt="devices" width="60px" height="40px"/>
                 <h1 className="footer_info_block_title">How it works</h1>
                 <p className="footer_info_block_text">Our content can be watched on many devices. Check our device list.</p>
             </div>
             <div className="footer_info_block">
-                <img className="footer-image" src={Payment_icon} alt="devices" width="60px" height="40px"/>
+                <img className="footer-image payment-img" src={Payment_icon} alt="devices" width="60px" height="40px"/>
                 <h1 className="footer_info_block_title">More payment methods</h1>
                 <p className="footer_info_block_text">Rakuten TV is compatible with PayPal, Visa and Mastercard credit cards.</p>
             </div>
             <div className="footer_info_block">
-                <img className="footer-image" src={Info_icon} alt="devices" width="60px" height="40px"/>
+                <img className="footer-image info-img" src={Info_icon} alt="devices" width="60px" height="40px"/>
                 <h1 className="footer_info_block_title">Help & Support</h1>
                 <p className="footer_info_block_text">Are you having problems with our service? Get in touch with our support team</p>
             </div>

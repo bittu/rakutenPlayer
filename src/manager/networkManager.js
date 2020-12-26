@@ -32,7 +32,7 @@ const getData=() => {
 
 
 export const getContentDetail =  (url) => {
-
+  console.log(url)
   return new Promise((resolve)=>{
     const get = async () => {
       await Axios.get(url).then(
