@@ -10,18 +10,21 @@ after cloning this repo, cd into the repo and execute the following commands:
 
 ```
 npm install 
-cd cors-anywhere/
-npm install
-nodemon server.js
 ```
 
-make sure you see Running CORS Anywhere on 127.0.0.2:8080 (;p on 8080 is must)
-
+after successfull installation kindly start using the below command:
 
 ```
-cd ..
 npm start
 ```
+
+To run test cases, please use the below command:
+
+```
+npm run test
+```
+
+this project is depending to proxy URLs:  https://thingproxy.freeboard.io/fetch/ 
 
 Please find the screenshots from this project below:
 
