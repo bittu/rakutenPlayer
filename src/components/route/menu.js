@@ -14,7 +14,6 @@ const menu = () => {
         <Router>
            <Navbar/>
             <Switch>
-
               <Route exact path='/' render={ () =>
                 <div>
                   <Home />
