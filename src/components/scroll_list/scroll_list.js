@@ -12,7 +12,11 @@ const scroll_list =  props => {
     const history = useHistory();
     const [posValue, setPosValue] = useState(0)
     let data = undefined
+    let enableRightArrow = true
     if(props.images){
+        if(props.images.length < 5)
+        enableRightArrow = false
+        console.log( )
      data = Array.from(props.images);
     }
     
@@ -54,7 +58,7 @@ const scroll_list =  props => {
                         )
                     }):[]}                    
                 </section>
-                <a className="next" onClick={()=>{scroll(1,props.id)}}><img src={Right} alt="right arrow" width="30" height="50" /></a>
+                <a className={(enableRightArrow)?"next":"prev_hidden"} onClick={()=>{scroll(1,props.id)}}><img src={Right} alt="right arrow" width="30" height="50" /></a>
             </div>
         </>
     )
