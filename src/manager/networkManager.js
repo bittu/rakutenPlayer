@@ -15,7 +15,7 @@ const getData=() => {
           Axios.get('https://thingproxy.freeboard.io/fetch/https://gizmo.rakuten.tv/v3/lists/nuestras-preferidas-de-la-semana?classification_id=5&device_identifier=web&locale=es&market_code=es')
       ])
       .then(function (responseArr) {
-        console.log(responseArr)
+        // console.log(responseArr)
         resolve(responseArr);
       })
       .catch((e)=>{
@@ -32,7 +32,7 @@ const getData=() => {
 
 
 export const getContentDetail =  (url) => {
-  console.log(url)
+  // console.log(url)
   return new Promise((resolve)=>{
     const get = async () => {
       await Axios.get(url).then(

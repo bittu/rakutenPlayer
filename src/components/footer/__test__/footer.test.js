@@ -19,7 +19,7 @@ it("renders Footer without crash",() => {
   ReactDOM.render(<Footer/>,div)
 })
 
-it('renders an `.footer_info_title`', () => {
+it('renders an .footer_info_title', () => {
   const wrapper = shallow(<Footer />);
   expect(wrapper.find('.footer_info_title')).to.have.lengthOf(1);
 });

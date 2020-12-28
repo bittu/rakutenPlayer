@@ -26,6 +26,7 @@
 
 .text_title {
     display: flex;
+    font-size: 3em;
     justify-content: center;
     align-items: center;
     color: #ffffff;
@@ -117,7 +118,7 @@
 }
 
 table{
-    padding: 1%;
+    padding: 5%;
     table-layout: fixed;
     width: 100%;
 }
@@ -269,8 +270,8 @@ th,td {
     align-items: center;
     margin-top: 18px;
     height: 7vh;
-    width: 14vw;
-    left: 42%;
+    width: 19vw;
+    left: 39%;
     background-color: yellow;
     position: absolute;
     font-size: x-large;

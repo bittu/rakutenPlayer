@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import getData from '../../manager/networkManager'
 import { useDispatch, useSelector } from 'react-redux'
-import Carousel from '../carousel_dir/carousel'
+import Carousel from '../carousel/carousel'
 import Scroll_list from '../scroll_list/scroll_list'
 import { useHistory } from 'react-router-dom';
 import $ from 'jquery'; 
@@ -79,7 +79,7 @@ const Home = () => {
             <h3 className="title">Especial x-men</h3>
             <Scroll_list id="id6" images ={XMEN}/>
             <h3 className="title">Nuestras Preferidas De La Semana</h3>
-            <Scroll_list id="id6" images ={OuFaOfThWe}/>
+            <Scroll_list id="id7" images ={OuFaOfThWe}/>
         </div>
     )
 }

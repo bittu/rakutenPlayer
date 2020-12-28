@@ -12,6 +12,8 @@ const carousel = (props) => {
     // console.log(props)
     const history = useHistory();
     const dispatch = useDispatch()
+    let selected = undefined
+    // const dispatch = useDispatch()
     // the animation for the horizontal carousel
     const scroll = useCallback(
         (direction) => {
@@ -31,19 +33,24 @@ const carousel = (props) => {
         localStorage.setItem('movieID', id);
         history.push('/movie')
     }
-    let data = Array.from(props.images);
-    // shuffle the images of the data array
-    const shuffled = data.sort(() => 0.5 - Math.random());
-    // get the first five elements of shuffled array
-    let selected = shuffled.slice(0, 5);
+
+    if(props) {
+        let data = Array.from(props.images);
+        // shuffle the images of the data array
+        const shuffled = data.sort(() => 0.5 - Math.random());
+        // get the first five elements of shuffled array
+        selected = shuffled.slice(0, 5);
+    }
+    
     return (
         <>
             <div className="main_carousel">
                 <a className="prev_carousel" onClick={()=>{scroll(-0.99)}}>
-                    <img src={Left} alt="left arrow" width="30" height="50" />
+                    <img className="left-carousel" src={Left} alt="left arrow" width="30" height="50" />
                 </a>
                 <section className="card_carousel">
-                {selected.map((item,i) => {
+                {props ? 
+                    selected.map((item,i) => {
                         return (
                             <div className="card_carousel--content" key={i}>
                                 <div className="title_carousel_div">
@@ -61,7 +68,7 @@ const carousel = (props) => {
                                 />
                             </div>
                         )
-                    })} 
+                    }): []}
                 </section>
                 <a className="next_carousel" onClick={()=>{scroll(0.99)}}>
                     <img src={Right} alt="right arrow" width="30" height="50" />

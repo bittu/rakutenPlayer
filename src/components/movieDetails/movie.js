@@ -136,7 +136,7 @@ const movie = () => {
                 <div className="trailer_Button"
                     onClick={()=>{playContent()}}
                     >
-                    TRAILER
+                    WATCH TRAILER
                 </div>
             </div> 
             
