@@ -8,9 +8,11 @@ const Navbar = () => {
   return (
     <div className="container">
     <div className="logo">
+      <Route>
         <Link to='/'>
-          <img src={RakutenLogo} width="187" height="42" alt="rakuten logo"/>
+          <img src={RakutenLogo} className="logo-img" width="187" height="42" alt="rakuten logo"/>
         </Link>
+        </Route>
     </div>
     <div className="navbar">
     </div>
