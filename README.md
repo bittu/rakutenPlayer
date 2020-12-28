@@ -24,7 +24,7 @@ To run test cases, please use the below command:
 npm run test
 ```
 
-This project is depending to proxy URLs:  https://thingproxy.freeboard.io/fetch/ 
+This project is depending on:  https://thingproxy.freeboard.io/fetch/ to proxy URLs 
 
 Please find the screenshots from this project below:
 
