@@ -40,7 +40,6 @@ const movie = () => {
   })
 
   const playContent = () => {
-    console.log("playContent")
     history.push("/player")
   }
 
@@ -67,8 +66,6 @@ const movie = () => {
       const original_Title = JSON.stringify(response.data.data.original_title)
       const year = JSON.stringify(response.data.data.year)
       const duration = JSON.stringify(response.data.data.duration)
-      const test = JSON.stringify(response.data.data)
-      console.log(JSON.parse(test))
       JSON.stringify(
         response.data.data.genres.map((item) => {
           movieDetails.genres.push({
@@ -131,11 +128,13 @@ const movie = () => {
       })
       $(".loader-wrapper").hide()
     })
+    .catch((er)=> {
+        history.push("/error")
+    })
   }, [])
 
   return (
     <>
-      {console.log(movieDetails.genres)}
       <div className="container_movie">
         <img src={movieDetails.image} alt="" width="100%" height="600px" />
       </div>

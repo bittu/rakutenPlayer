@@ -9,7 +9,6 @@ import Left from "../../assets/left.png"
 import "./carousel.css"
 
 const carousel = (props) => {
-  // console.log(props)
   const history = useHistory()
   const dispatch = useDispatch()
   let selected = undefined
@@ -20,7 +19,6 @@ const carousel = (props) => {
       let far = ($(".card_carousel").width() / 0.99) * direction
       let pos = $(".card_carousel").scrollLeft() + far
       $(".card_carousel").animate({scrollLeft: pos}, 1000)
-      // console.log("far,direction,pos",far,direction,pos)
     },
     [] // Tells React to memoize regardless of arguments
   )

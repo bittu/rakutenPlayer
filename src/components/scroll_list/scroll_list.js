@@ -15,7 +15,6 @@ const scroll_list = (props) => {
   let enableRightArrow = true
   if (props.images) {
     if (props.images.length < 5) enableRightArrow = false
-    console.log()
     data = Array.from(props.images)
   }
 

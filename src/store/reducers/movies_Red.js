@@ -3,7 +3,6 @@ export default function(state = {
 }, action) {
     switch (action.type) {
         case 'MOVIEID':   
-        console.log(action.obj)    
             return {
                 ...state,
                 MID: action.obj

@@ -28,7 +28,6 @@ const getData = () => {
         ),
       ])
         .then(function (responseArr) {
-          // console.log(responseArr)
           resolve(responseArr)
         })
         .catch((e) => {
@@ -43,11 +42,14 @@ const getData = () => {
 export default getData
 
 export const getContentDetail = (url) => {
-  // console.log(url)
-  return new Promise((resolve) => {
+  return new Promise((resolve,reject) => {
     const get = async () => {
       await Axios.get(url).then((response) => {
         resolve(response)
+      })
+      .catch((er)=>{
+        console.log(er)
+        reject(er)
       })
     }
     get()
