@@ -4,6 +4,7 @@ import {getContentDetail} from "../../manager/networkManager"
 import {useHistory} from "react-router-dom"
 import DirectorsAndActors from "../directorsAndActors_list/directorsAndActors_list"
 import $ from "jquery"
+import {trackEvent} from '../../manager/analyticsManager'
 
 import Year from "../../assets/year.png"
 import Time from "../../assets/time.png"
@@ -127,6 +128,14 @@ const movie = () => {
         duration: JSON.parse(duration),
       })
       $(".loader-wrapper").hide()
+      console.log(response.data.data)
+      trackEvent("Screen View", {
+        PageName: "MovieDetails Page",
+        "Movie title": response.data.data.title,
+        "Original Title":response.data.data.original_title,
+        type: response.data.data.type,
+        id: response.data.data.id,
+      })
     })
     .catch((er)=> {
         history.push("/error")

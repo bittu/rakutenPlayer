@@ -1,6 +1,7 @@
 import React from "react"
 const shaka = require("shaka-player/dist/shaka-player.ui.js")
 import $ from "jquery"
+import {trackEvent} from '../../manager/analyticsManager'
 
 import "./player.css"
 import "shaka-player/dist/controls.css"
@@ -67,6 +68,8 @@ class VideoPlayer extends React.Component {
         $(".loader-wrapper").hide() //hides the loader
         // This runs if the asynchronous load is successful.
         console.log("The video has now been loaded!")
+        trackEvent('Screen View',{"PageName": "Player Screen"})
+        
       })
       .catch(this.onError) // onError is executed if the asynchronous load fails.
   }

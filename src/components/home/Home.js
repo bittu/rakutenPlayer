@@ -5,6 +5,7 @@ import Carousel from "../carousel/carousel"
 import Scroll_list from "../scroll_list/scroll_list"
 import {useHistory} from "react-router-dom"
 import $ from "jquery"
+import {trackEvent} from "../../manager/analyticsManager"
 
 import "./Home.css"
 
@@ -49,6 +50,7 @@ const Home = () => {
         dispatch(SpclXMen())
         dispatch(setOurFavoritesOfTheWeek())
         $(".loader-wrapper").hide()
+        trackEvent("Screen View",{"PageName": "HomePage"})
       })
       .catch((err) => {
         console.log(err)
