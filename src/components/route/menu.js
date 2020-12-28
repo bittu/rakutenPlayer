@@ -1,9 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Home from '../home/Home'
-import Error from '../errorScreen/error'
-import Movie from '../movieDetails/movie'
-import App from '../player/shakaPlayer';
+import Home from '../../Screens/home/Home'
+import Error from '../../Screens/errorScreen/error'
+import Movie from '../../Screens/movieDetails/movie'
+import Player from '../../Screens/player/shakaPlayer';
 import Navbar from '../NavBar/navBar'
 import Footer from '../footer/footer'
 
@@ -28,7 +28,7 @@ const menu = () => {
                 </div>
               }/>
 
-              <Route exact path='/player' component={App}/>  
+              <Route exact path='/player' component={Player}/>  
               <Route exact path ='/error' component={Error}/>
 
           </Switch>

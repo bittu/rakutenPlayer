@@ -10,6 +10,10 @@ import WarningImg from "../../../assets/Something-Wrong.png"
 
 Enzyme.configure({adapter: new Adapter()})
 
+jest.mock('../../../manager/analyticsManager.js');
+const mixpanel = require('../../../manager/analyticsManager.js')
+mixpanel.trackEvent(() => {return(undefined)});
+
 it("Error Screen is rendered without crash", () => {
   const div = document.createElement("div")
   ReactDOM.render(<ErrorScreen />, div)

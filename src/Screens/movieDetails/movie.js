@@ -2,7 +2,7 @@ import React, {useEffect, useReducer} from "react"
 import {useSelector} from "react-redux"
 import {getContentDetail} from "../../manager/networkManager"
 import {useHistory} from "react-router-dom"
-import DirectorsAndActors from "../directorsAndActors_list/directorsAndActors_list"
+import DirectorsAndActors from "../../components/directorsAndActors_list/directorsAndActors_list"
 import $ from "jquery"
 import {trackEvent} from '../../manager/analyticsManager'
 
