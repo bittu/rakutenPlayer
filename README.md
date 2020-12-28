@@ -12,7 +12,7 @@ after cloning this repo, cd into the repo and execute the following commands:
 npm install 
 ```
 
-after successfull installation, you can see a folder named 'node modules'. kindly start the project using the below command:
+after successfull installation, you can see a folder named 'node_modules'. kindly start the project using the below command:
 
 ```
 npm start
