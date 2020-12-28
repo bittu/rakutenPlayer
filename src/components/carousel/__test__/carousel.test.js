@@ -11,7 +11,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 const CarouselwithProvider = ()=> {return(
   <Provider>
-    <Carousel/>
+    <Carousel images={[]} />
   </Provider>
 )}
 

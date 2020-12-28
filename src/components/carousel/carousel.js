@@ -68,7 +68,7 @@ const carousel = (props) => {
                                 />
                             </div>
                         )
-                    }): []}
+                    }): <div></div>}
                 </section>
                 <a className="next_carousel" onClick={()=>{scroll(0.99)}}>
                     <img src={Right} alt="right arrow" width="30" height="50" />

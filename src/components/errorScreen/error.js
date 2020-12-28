@@ -4,14 +4,10 @@ import WarningImg from '../../assets/Something-Wrong.png'
 import './error.css'
 
 const error = () => {
-  // useEffect( ()=> {
-  //   $('.loader-wrapper').hide();
-  // },[]);
-  
   return (
     <div className='error-screen' style={{backgroundImage: `url(${Background})`}}>
       <div className='error-card'>
-      <h1>Something went wrong</h1>
+      <h1 className="heading">Something went wrong</h1>
         <p>We offer the latest Hollywood blockbusters,&nbsp;the most<br/>
           popular TV series, and&nbsp;the&nbsp;best films&nbsp;from<br/>
           independent filmmakers.
