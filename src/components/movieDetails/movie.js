@@ -128,7 +128,6 @@ const movie = () => {
         duration: JSON.parse(duration),
       })
       $(".loader-wrapper").hide()
-      console.log(response.data.data)
       trackEvent("Screen View", {
         PageName: "MovieDetails Page",
         "Movie title": response.data.data.title,

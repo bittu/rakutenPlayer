@@ -1,9 +1,11 @@
 import React, {useEffect} from 'react'
 import Background from '../../assets/worldMap.png'
 import WarningImg from '../../assets/Something-Wrong.png'
+import {trackEvent} from '../../manager/analyticsManager'
 import './error.css'
 
 const error = () => {
+  trackEvent("Screen View",{"PageName":"Error screen"})
   return (
     <div className='error-screen' style={{backgroundImage: `url(${Background})`}}>
       <div className='error-card'>
